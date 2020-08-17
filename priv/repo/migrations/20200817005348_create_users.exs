@@ -3,6 +3,7 @@ defmodule WirelixrApi.Repo.Migrations.CreateUsers do
 
   def change do
     create table(:users) do
+      add :slackId, :string
       add :first_name, :string
       add :last_name, :string
       add :email, :string
@@ -11,5 +12,6 @@ defmodule WirelixrApi.Repo.Migrations.CreateUsers do
 
       timestamps()
     end
+
   end
 end
