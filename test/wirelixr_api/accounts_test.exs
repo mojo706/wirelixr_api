@@ -6,9 +6,30 @@ defmodule WirelixrApi.AccountsTest do
   describe "users" do
     alias WirelixrApi.Accounts.User
 
-    @valid_attrs %{email: "some email", first_name: "some first_name", last_name: "some last_name", password_hash: "some password_hash", role: "some role", slackId: "some slackId"}
-    @update_attrs %{email: "some updated email", first_name: "some updated first_name", last_name: "some updated last_name", password_hash: "some updated password_hash", role: "some updated role", slackId: "some updated slackId"}
-    @invalid_attrs %{email: nil, first_name: nil, last_name: nil, password_hash: nil, role: nil, slackId: nil}
+    @valid_attrs %{
+      email: "some email",
+      first_name: "some first_name",
+      last_name: "some last_name",
+      password_hash: "some password_hash",
+      role: "some role",
+      slackId: "some slackId"
+    }
+    @update_attrs %{
+      email: "some updated email",
+      first_name: "some updated first_name",
+      last_name: "some updated last_name",
+      password_hash: "some updated password_hash",
+      role: "some updated role",
+      slackId: "some updated slackId"
+    }
+    @invalid_attrs %{
+      email: nil,
+      first_name: nil,
+      last_name: nil,
+      password_hash: nil,
+      role: nil,
+      slackId: nil
+    }
 
     def user_fixture(attrs \\ %{}) do
       {:ok, user} =
